@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloWorldServlet
  */
-@WebServlet("/hello")
+@WebServlet("/")
 public class HelloWorldServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -31,6 +31,7 @@ public class HelloWorldServlet extends HttpServlet {
             throws ServletException, IOException {
         // TODO Auto-generated method stub
 //        response.getWriter().append("Served at: ").append(request.getContextPath());
+        request.setAttribute("greetingName", "tim");
         request.getRequestDispatcher("HelloWorld.jsp").forward(request, response);
     }
 
